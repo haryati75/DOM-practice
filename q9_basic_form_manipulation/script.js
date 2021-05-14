@@ -1,13 +1,26 @@
 
 function getFormValues() {
 
-    let email = null;
+    let email = document.querySelector("#email-address").value;
 
+    let models = document.querySelectorAll(".phone-type");
     let model = null;
+    for (let m of models) {
+        if (m.checked) {
+            model = m.value;
+            break;
+        }
+    }
 
-    let services = null;
+    let servicesAll = document.querySelectorAll(".services");
+    let services = [];
+    for (let s of servicesAll) {
+        if (s.checked) {
+            services.push(s.value)
+        }
+    }
 
-    let pickup = null;
+    let pickup = document.querySelector("#pick-up").value;
 
     // leave this line alone!
     return [email, model, services, pickup];

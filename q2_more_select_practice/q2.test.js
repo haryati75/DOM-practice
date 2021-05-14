@@ -15,8 +15,10 @@ it("should be able to select the header", async () => {
   let solution;
   try {
     solution = require("./solutions.js");
+
   } catch (e) {
     solution = require("./script.js");
+
   }
   let {
     header2,
